@@ -1,0 +1,571 @@
+<title>Satisfacție clienți CJ Iași</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Layout: antet instituțional cu file; formular într-o coloană de lectură; tablou de bord pe grilă cu o singură zonă dominantă (clasamentul structurilor). */
+:root{
+  --bg:#EEF2F7; --surface:#FFFFFF; --ink:#14243B; --muted:#586A82; --line:#D3DBE6; --soft:#E4EBF4;
+  --brand:#1F3A5F; --on-brand:#FFFFFF; --focus:#2B6CB0;
+  --vb:#0F7B5F; --good:#2B6CB0; --warn:#A86A0E; --crit:#B83227;
+  --vb-bg:#DDF2EA; --good-bg:#DFEAF7; --warn-bg:#F8EBCF; --crit-bg:#F8DEDB;
+  --f-serif:'IBM Plex Serif',Georgia,serif; --f-sans:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1726; --surface:#16233A; --ink:#E7EDF6; --muted:#9FB0C8; --line:#2C3D58; --soft:#1D2C46;
+  --brand:#8DB4E8; --on-brand:#0E1726; --focus:#8DB4E8;
+  --vb:#4FD1A5; --good:#7FB2EE; --warn:#E5B35A; --crit:#F0877D;
+  --vb-bg:#143A33; --good-bg:#1B3454; --warn-bg:#3B2F14; --crit-bg:#41201D; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1726; --surface:#16233A; --ink:#E7EDF6; --muted:#9FB0C8; --line:#2C3D58; --soft:#1D2C46;
+  --brand:#8DB4E8; --on-brand:#0E1726; --focus:#8DB4E8;
+  --vb:#4FD1A5; --good:#7FB2EE; --warn:#E5B35A; --crit:#F0877D;
+  --vb-bg:#143A33; --good-bg:#1B3454; --warn-bg:#3B2F14; --crit-bg:#41201D; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-sans);margin:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 40px}
+.wrap{max-width:1080px;margin:0 auto}
+header.top{padding:22px 0 0}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{font:600 26px/1.2 var(--f-serif);margin:4px 0 0;text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);margin:0 0 10px;text-wrap:balance}
+h3{font:600 15px/1.35 var(--f-sans);margin:0 0 6px}
+nav.tabs{display:flex;gap:4px;margin:18px 0 20px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.tabs button{font:500 15px var(--f-sans);background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:10px 14px;cursor:pointer;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{color:var(--brand);border-bottom-color:var(--brand);font-weight:600}
+button:focus-visible,input:focus-visible+span,select:focus-visible,textarea:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px}
+.stack{display:flex;flex-direction:column;gap:16px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+/* formular */
+.form{max-width:720px;margin:0 auto}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;min-width:0}
+label.lbl,legend{font-weight:600;font-size:14px;padding:0}
+select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:10px 12px;width:100%;min-width:0}
+textarea{min-height:92px;resize:vertical}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.chip span{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:14px}
+.chip input:checked+span{background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
+.q{border-top:1px solid var(--line);padding:14px 0}
+.q legend{float:left;width:100%;margin-bottom:8px}
+.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;clear:both;max-width:420px}
+.scale label{position:relative;display:block}
+.scale input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.scale span{display:flex;align-items:center;justify-content:center;height:44px;border:1px solid var(--line);border-radius:6px;background:var(--surface);font-weight:600;font-variant-numeric:tabular-nums}
+.scale input:checked+span{background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
+.ends{display:flex;justify-content:space-between;max-width:420px;font-size:12px;color:var(--muted);margin-top:4px;gap:8px}
+.notice{background:var(--soft);border-radius:6px;padding:12px 14px;font-size:13.5px}
+.btn{font:600 15px var(--f-sans);background:var(--brand);color:var(--on-brand);border:0;border-radius:6px;padding:12px 22px;cursor:pointer}
+.btn.ghost{background:none;color:var(--brand);border:1px solid var(--brand)}
+.btn:disabled{opacity:.6;cursor:default}
+.err{color:var(--crit);font-size:13.5px;margin:0 0 12px}
+.err ul{margin:4px 0 0;padding-left:18px}
+.thanks{text-align:left}
+/* rezultate */
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:14px}
+.filters .field{margin:0}
+.banner{border:1px dashed var(--warn);background:var(--warn-bg);color:var(--ink);border-radius:6px;padding:10px 14px;font-size:13.5px;margin-bottom:14px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:16px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.kpi .v{font:600 34px/1.1 var(--f-serif);font-variant-numeric:tabular-nums}
+.kpi .l{font-size:13px;color:var(--muted);margin-top:4px}
+.grid2{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px}
+@media (max-width:860px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.pill.vb{background:var(--vb-bg);color:var(--vb)} .pill.good{background:var(--good-bg);color:var(--good)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)} .pill.crit{background:var(--crit-bg);color:var(--crit)}
+.pill.na{background:var(--soft);color:var(--muted)}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-weight:600;color:var(--muted);font-size:12px;letter-spacing:.03em;text-transform:uppercase;border-bottom:1px solid var(--line);padding:8px 10px;white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid var(--soft);vertical-align:top}
+td.n,th.n{text-align:right}
+tr.row{cursor:pointer} tr.row:hover td{background:var(--soft)} tr.row.sel td{background:var(--good-bg)}
+svg text{font-family:var(--f-sans);fill:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:12.5px;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.cm{border-top:1px solid var(--soft);padding:10px 0;font-size:14px}
+.cm .meta{font-size:12px;color:var(--muted)}
+/* indicatori */
+.ind{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.ind .card{padding:16px}
+.ind dl{margin:8px 0 0;font-size:13.5px}
+.ind dt{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:8px;font-weight:600}
+.ind dd{margin:2px 0 0}
+.tag{font:600 12px var(--f-sans);color:var(--brand);background:var(--soft);padding:2px 8px;border-radius:4px}
+.hidden-tab{display:none}
+[hidden]{display:none!important}
+.sub{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.sub button{font:500 14px var(--f-sans);background:var(--surface);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:7px 14px;cursor:pointer}
+.sub button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
+.kri{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-bottom:16px}
+.kri .kpi .v{font-size:30px}
+.dl{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+.dl.up{color:var(--vb)} .dl.dn{color:var(--crit)} .dl.eq{color:var(--muted)}
+.ex{border-left:4px solid var(--warn);padding:8px 12px;margin:8px 0;background:var(--surface);border-radius:0 6px 6px 0;font-size:14px}
+.ex.crit{border-left-color:var(--crit)}
+.csfbar{height:8px;border-radius:4px;background:var(--soft);overflow:hidden;margin-top:6px}
+.csfbar i{display:block;height:100%;background:var(--good)}
+.sym{font-size:20px;font-weight:700}
+@media (prefers-reduced-motion:no-preference){.pill,.chip span,.scale span{transition:background .15s}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Consiliul Județean Iași · Proces FP-013</div>
+    <h1>Satisfacția clienților</h1>
+    <nav class="tabs" role="tablist" aria-label="Secțiuni">
+      <button role="tab" id="tab-q" aria-selected="true" aria-controls="p-q">Chestionar</button>
+      <button role="tab" id="tab-r" aria-selected="false" aria-controls="p-r">Rezultate</button>
+      <button role="tab" id="tab-e" aria-selected="false" aria-controls="p-e">Excepții</button>
+      <button role="tab" id="tab-i" aria-selected="false" aria-controls="p-i">Indicatori</button>
+    </nav>
+  </header>
+
+  <!-- CHESTIONAR -->
+  <section id="p-q" role="tabpanel" aria-labelledby="tab-q">
+    <div class="form card" id="formcard">
+      <form id="f" novalidate>
+        <h2>Spuneți-ne cum a fost</h2>
+        <p class="muted" style="margin-top:0">Durează 2–3 minute. Chestionarul este anonim: nu vă cerem nume, CNP, telefon sau e-mail.</p>
+
+        <div class="field">
+          <label class="lbl" for="s">Cu ce structură ați intrat în contact?</label>
+          <select id="s" required><option value="">Alegeți structura…</option></select>
+        </div>
+        <div class="field">
+          <label class="lbl" for="svc">Serviciul solicitat</label>
+          <select id="svc" disabled><option value="">Alegeți mai întâi structura</option></select>
+        </div>
+        <fieldset class="field"><legend>Sunteți</legend>
+          <div class="chips" id="tc"></div></fieldset>
+        <fieldset class="field"><legend>Cum ați intrat în contact?</legend>
+          <div class="chips" id="ch"></div></fieldset>
+
+        <fieldset class="field"><legend>Câte contacte ați avut cu această structură în ultimul an? <span class="muted" style="font-weight:400">(opțional)</span></legend>
+          <div class="chips" id="fq"></div></fieldset>
+
+        <div id="qs"></div>
+
+        <fieldset class="field q"><legend>Problema dumneavoastră a fost rezolvată?</legend>
+          <div class="chips" id="q7"></div></fieldset>
+        <div class="field">
+          <label class="lbl" for="txt">Ce ar trebui să îmbunătățim? <span class="muted" style="font-weight:400">(opțional)</span></label>
+          <textarea id="txt" maxlength="500" placeholder="Scrieți pe scurt. Vă rugăm să nu includeți nume sau date personale."></textarea>
+          <div class="small muted"><span id="cnt">0</span>/500</div>
+        </div>
+        <div class="notice" style="margin-bottom:16px">Pentru o petiție sau o reclamație cu răspuns oficial, adresați-vă Serviciului Ghișeu Unic, ATOP, Parteneriate și Relația cu Societatea Civilă. Chestionarul nu înlocuiește această cale.</div>
+        <div class="err" id="err" role="alert" hidden></div>
+        <button class="btn" id="send" type="submit">Trimite chestionarul</button>
+      </form>
+      <div class="thanks" id="thanks" hidden>
+        <h2>Vă mulțumim!</h2>
+        <p>Răspunsul dumneavoastră a fost înregistrat și ne ajută să îmbunătățim serviciile Consiliului Județean Iași.</p>
+        <button class="btn ghost" id="again" type="button">Completați un alt chestionar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- REZULTATE -->
+  <section id="p-r" role="tabpanel" aria-labelledby="tab-r" class="hidden-tab">
+    <div id="denied" class="notice" hidden style="margin-bottom:14px">Rezultatele individuale sunt vizibile doar persoanelor autorizate (SPGCMI și conducere). Puteți vedea totuși datele demonstrative.</div>
+    <div id="demoBanner" class="banner" hidden>
+      <span><b>Date demonstrative.</b> Răspunsurile de mai jos sunt generate pentru exemplificare și nu provin de la clienți.</span>
+      <button class="btn ghost" id="demoOff" style="padding:6px 12px;font-size:13px">Ascunde</button>
+    </div>
+    <div class="filters">
+      <div class="field"><label class="lbl" for="fp">Perioada</label><select id="fp">
+        <option value="all">Toată perioada</option><option value="30">Ultimele 30 de zile</option><option value="90">Ultimele 90 de zile</option><option value="sem">Semestrul curent</option></select></div>
+      <div class="field"><label class="lbl" for="fd">Direcția</label><select id="fd"><option value="">Toate</option></select></div>
+      <div class="field"><label class="lbl" for="ft">Tipul clientului</label><select id="ft"><option value="">Toți</option></select></div>
+      <div class="field"><label class="lbl" for="fc">Canalul</label><select id="fc"><option value="">Toate</option></select></div>
+      <div class="field"><label class="lbl" for="ff">Frecvența contactului</label><select id="ff"><option value="">Toate</option></select></div>
+    </div>
+    <div id="res"></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+      <button class="btn ghost" id="demoOn" hidden>Afișează date demonstrative</button>
+      <button class="btn ghost" id="exp">Exportă CSV</button>
+    </div>
+    <div id="expfb" hidden class="card" style="margin-top:12px"><div class="small muted">Descărcarea nu este disponibilă în această vizualizare. Copiați textul de mai jos:</div><textarea id="expta" rows="6" readonly></textarea></div>
+  </section>
+
+  <!-- EXCEPȚII -->
+  <section id="p-e" role="tabpanel" aria-labelledby="tab-e" class="hidden-tab">
+    <div class="card" style="margin-bottom:14px"><h2>Raport de excepții</h2>
+      <p class="muted" style="margin-top:0">Situațiile care cer acțiune acum, nu la raportul trimestrial. Șeful structurii analizează <b>cauza din proces</b>; respondenții nu sunt identificabili și nu se caută. Datele de aici nu depind de filtrele din fila Rezultate.</p>
+      <div class="field" style="max-width:260px;margin-bottom:0"><label class="lbl" for="ew">Fereastra pentru răspunsuri individuale</label><select id="ew"><option value="2">Ultimele 48 de ore</option><option value="7" selected>Ultimele 7 zile</option><option value="30">Ultimele 30 de zile</option></select></div></div>
+    <div id="exc"></div>
+  </section>
+
+  <!-- INDICATORI -->
+  <section id="p-i" role="tabpanel" aria-labelledby="tab-i" class="hidden-tab">
+    <div class="stack">
+      <div class="card">
+        <h2>Cei trei indicatori ai fiecărei structuri</h2>
+        <p class="muted" style="margin-top:0">I1 măsoară percepția clientului prin acest chestionar; I2 măsoară promptitudinea; I3 măsoară calitatea sau conformitatea. Fiecare indicator este clasificat (RI/PI), legat de un factor critic de succes și are efectul nedorit probabil cu controlul lui. Intervalele sunt propuneri de pornire, de validat de Comisia de Monitorizare după primul trimestru.</p>
+        <div class="sub" role="group" aria-label="Vedere"><button type="button" id="v-s" aria-pressed="true">Pe structuri (66)</button><button type="button" id="v-i" aria-pressed="false">Instituție: KRI, KPI, PI</button><button type="button" id="v-c" aria-pressed="false">Factori critici de succes</button></div>
+        <div class="field" id="isw" style="max-width:520px;margin-bottom:0"><label class="lbl" for="is">Structura</label><select id="is"></select></div>
+      </div>
+      <div id="indcards"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+const STRUCTS = [{"cod": "SCRID", "nume": "Serviciul Comunicare, Relații Internaționale și Digitalizare", "directie": "Aparat direct", "tipClient": "mixt", "clienti": "cetățeni, mass-media, parteneri internaționali, structuri interne", "servicii": ["Informații/relații cu presa", "Suport informatic și acces la aplicații", "Relații internaționale și protocol extern"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (cetățeni, mass-media, parteneri internaționali, structuri interne)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Rezolvarea cererilor de suport informatic în termen", "formula": "Nr. solicitări de suport rezolvate în ≤ 2 zile lucrătoare / Nr. total solicitări × 100", "sursa": "Registru solicitări suport IT / DocManager", "frecventa": "Lunar", "tinta": "≥ 90%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Tichete închise formal, fără rezolvare reală. → Se urmăresc reredeschiderile și răspunsul Q7 al clienților interni."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Actualitatea informațiilor publice pe site", "formula": "Nr. documente de interes public (HCJ, dispoziții, anunțuri) publicate în ≤ 3 zile lucrătoare de la adoptare/emitere / Nr. total × 100", "sursa": "Evidența publicărilor pe site", "frecventa": "Trimestrial", "tinta": "≥ 95%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF7", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Publicare în grabă, cu erori sau fără anonimizare. → Se numără corecturile după publicare și verificarea RGPD."}], "cheie": "ziariști cu solicitări repetate, parteneri internaționali activi, structurile cu cele mai multe solicitări IT"}, {"cod": "CAPI", "nume": "Compartimentul Audit Public Intern", "directie": "Aparat direct", "tipClient": "intern", "clienti": "structurile și entitățile auditate", "servicii": ["Misiuni de audit de regularitate/performanță", "Consiliere formalizată", "Urmărirea recomandărilor"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (structurile și entitățile auditate)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Realizarea Planului anual de audit", "formula": "Nr. misiuni cu raport finalizat la termen / Nr. misiuni planificate × 100", "sursa": "Plan anual de audit; rapoarte de audit", "frecventa": "Trimestrial", "tinta": "≥ 90%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF5", "persp": "Proces intern", "resp": "Șeful structurii", "efect": "Misiuni scurtate pentru a respecta termenul. → Calitatea rapoartelor este revizuită de șeful structurii."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Implementarea recomandărilor de audit", "formula": "Nr. recomandări implementate în termenul stabilit / Nr. recomandări cu termen scadent × 100", "sursa": "Fișe de urmărire a recomandărilor", "frecventa": "Trimestrial", "tinta": "≥ 80%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF2", "persp": "Proces intern", "resp": "Șeful structurii", "efect": "Recomandări formulate vag sau ușor de bifat. → Se raportează și nivelul de risc al recomandărilor."}], "cheie": "conducerile structurilor auditate; Președintele"}, {"cod": "CCIUSCJI", "nume": "Compartimentul Control și Îndrumare la Unitățile din Subordine", "directie": "Aparat direct", "tipClient": "intern", "clienti": "conducerile unităților subordonate controlate", "servicii": ["Acțiune de control tematic", "Îndrumare metodologică", "Verificarea măsurilor dispuse"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (conducerile unităților subordonate controlate)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Realizarea programului de control", "formula": "Nr. acțiuni de control finalizate / Nr. acțiuni programate × 100", "sursa": "Program anual de control; note de control", "frecventa": "Trimestrial", "tinta": "≥ 95%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF5", "persp": "Proces intern", "resp": "Șeful structurii", "efect": "Controale superficiale pentru a închide programul. → Se verifică un eșantion de note de control."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Promptitudinea comunicării rezultatelor controlului", "formula": "Nr. note/rapoarte transmise unității în ≤ 10 zile lucrătoare de la încheierea controlului / Nr. total × 100", "sursa": "Registru de control; DocManager", "frecventa": "Trimestrial", "tinta": "≥ 90%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF4", "persp": "Proces intern", "resp": "Șeful structurii", "efect": "Note transmise incomplete pentru a respecta termenul. → Se numără și completările solicitate ulterior."}], "cheie": "conducerile unităților subordonate controlate"}, {"cod": "SRUS", "nume": "Serviciul Resurse Umane și Salarizare", "directie": "Aparat direct", "tipClient": "intern", "clienti": "angajați, candidați la concursuri, aleși locali", "servicii": ["Adeverințe și documente de personal", "Recrutare și concursuri", "Salarizare, concedii, formare profesională"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (angajați, candidați la concursuri, aleși locali)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Soluționarea cererilor de personal în termen", "formula": "Nr. cereri (adeverințe, concedii, modificări de raport de muncă) soluționate în ≤ 5 zile lucrătoare / Nr. total × 100", "sursa": "DocManager; registru de cereri", "frecventa": "Lunar", "tinta": "≥ 95%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Răspunsuri rapide, dar formale sau incomplete. → Q7 din partea clienților interni."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Procedurile de recrutare fără contestații admise", "formula": "Nr. concursuri/proceduri de recrutare fără contestație admisă / Nr. total concursuri × 100", "sursa": "Dosare de concurs", "frecventa": "Anual", "tinta": "100%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF6", "persp": "Satisfacția personalului", "resp": "Șeful structurii", "efect": "Proceduri prea formale sau concursuri amânate pentru a evita contestațiile. → Se urmărește și durata de ocupare a posturilor vacante."}], "cheie": "angajații cu cereri frecvente, candidații la concursuri"}, {"cod": "SPDDS", "nume": "Serviciul Programe, Dezvoltare Durabilă și Strategii", "directie": "Direcția Proiecte și Dezvoltare Durabilă", "tipClient": "extern", "clienti": "UAT-uri din județ, parteneri instituționali, ONG-uri, cetățeni consultați", "servicii": ["Consultare/asistență pentru strategii și programe", "Informare privind oportunități de finanțare", "Colectare date pentru analize județene"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (UAT-uri din județ, parteneri instituționali, ONG-uri, cetățeni consultați)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Răspunsul la solicitările UAT și ale partenerilor", "formula": "Nr. solicitări de informare/asistență soluționate în ≤ 10 zile lucrătoare / Nr. total × 100", "sursa": "DocManager", "frecventa": "Lunar", "tinta": "≥ 90%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF4", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Răspunsuri-șablon, doar pentru a respecta termenul. → Q5 (utilitatea soluției)."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Participarea UAT la consultări", "formula": "Nr. UAT care au răspuns la consultări/chestionare de nevoi / Nr. UAT invitate × 100", "sursa": "Evidența consultărilor", "frecventa": "Anual", "tinta": "≥ 80%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF4", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Presiune asupra UAT pentru răspunsuri formale. → Calitatea contribuțiilor se analizează separat, calitativ."}], "cheie": "primăriile și partenerii instituționali implicați în strategii"}, {"cod": "CGUEE", "nume": "Compartiment Ghișeu Unic de Eficiență Energetică", "directie": "Direcția Proiecte și Dezvoltare Durabilă", "tipClient": "extern", "clienti": "proprietari de locuințe, asociații de proprietari, comunități energetice", "servicii": ["Consiliere pentru renovare energetică", "Informare despre programe de finanțare", "Campanii de informare"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (proprietari de locuințe, asociații de proprietari, comunități energetice)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Răspunsul la solicitările de consiliere", "formula": "Nr. solicitări de consiliere cu răspuns în ≤ 5 zile lucrătoare / Nr. total × 100", "sursa": "Registru ghișeu eficiență energetică", "frecventa": "Lunar", "tinta": "≥ 90%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client · Mediu și comunitate", "resp": "Șeful structurii", "efect": "Răspuns rapid, fără consiliere reală. → Q5 și Q7."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Volumul beneficiarilor consiliați", "formula": "Nr. beneficiari consiliați în perioadă / ținta anuală proporțională × 100", "sursa": "Registru ghișeu; raportare semestrială către MDLPA", "frecventa": "Trimestrial", "tinta": "≥ 100% din țintă", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client · Mediu și comunitate", "resp": "Șeful structurii", "efect": "Număr crescut prin consilieri foarte scurte. → Se raportează separat consilierile care au dus la un pas concret."}], "cheie": "asociațiile de proprietari și proprietarii care au demarat un proiect"}, {"cod": "SPP", "nume": "Serviciul Proiecte și Parteneriate", "directie": "Direcția Proiecte și Dezvoltare Durabilă", "tipClient": "extern", "clienti": "beneficiari și parteneri de proiect, UAT, instituții publice", "servicii": ["Implementare proiecte cu finanțare nerambursabilă", "Verificarea rapoartelor și cererilor partenerilor", "Monitorizare post-implementare"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (beneficiari și parteneri de proiect, UAT, instituții publice)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Verificarea documentelor partenerilor în termen", "formula": "Nr. rapoarte/cereri de la parteneri verificate în ≤ 10 zile lucrătoare / Nr. total × 100", "sursa": "Registru proiecte; DocManager", "frecventa": "Lunar", "tinta": "≥ 90%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF4", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Verificări superficiale pentru a respecta termenul de 10 zile. → Se urmărește și numărul documentelor returnate de Direcția Economică."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Proiecte fără întârzieri majore", "formula": "Nr. proiecte în implementare cu întârziere ≤ 30 zile față de grafic / Nr. total proiecte în implementare × 100", "sursa": "Rapoarte de progres", "frecventa": "Trimestrial", "tinta": "≥ 85%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF5", "persp": "Proces intern · Financiar", "resp": "Șeful structurii", "efect": "Grafice modificate pentru ca întârzierile să nu apară. → Comparație cu graficul inițial aprobat."}], "cheie": "partenerii și beneficiarii proiectelor aflate în implementare"}, {"cod": "CMSIMD", "nume": "Compartimentul Mediu și SMID", "directie": "Direcția Proiecte și Dezvoltare Durabilă", "tipClient": "extern", "clienti": "UAT-uri, operatori de salubrizare, ADIS Iași, cetățeni", "servicii": ["Sesizări privind gestionarea deșeurilor", "Informații despre SMID", "Coordonare cu UAT și operatori"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (UAT-uri, operatori de salubrizare, ADIS Iași, cetățeni)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Soluționarea sesizărilor privind deșeurile în termenul legal", "formula": "Nr. sesizări/petiții soluționate în ≤ 30 zile (OG 27/2002) / Nr. total × 100", "sursa": "DocManager; registru petiții", "frecventa": "Lunar", "tinta": "≥ 98%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Mediu și comunitate", "resp": "Șeful structurii", "efect": "Închidere cu răspunsul „nu este de competența noastră”. → Q7 și verificarea unui eșantion de petiții."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Raportarea indicatorilor SMID la termen", "formula": "Nr. rapoarte periodice SMID transmise la termen / Nr. rapoarte scadente × 100", "sursa": "Registru rapoarte SMID", "frecventa": "Trimestrial", "tinta": "100%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF7", "persp": "Mediu și comunitate", "resp": "Șeful structurii", "efect": "Rapoarte la termen, dar incomplete. → Șeful serviciului verifică completitudinea."}], "cheie": "UAT-urile și operatorii de salubrizare; ADIS Iași"}, {"cod": "SUAT-GIS", "nume": "Serviciul Urbanism, Amenajarea Teritoriului și GIS", "directie": "Direcția Arhitect Șef", "tipClient": "extern", "clienti": "primării, elaboratori de documentații, investitori, cetățeni", "servicii": ["Aviz de oportunitate / avizul arhitectului-șef", "Asistență tehnică pentru UAT și elaboratori", "Date GIS și informații de urbanism"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (primării, elaboratori de documentații, investitori, cetățeni)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Emiterea avizelor în termenul legal", "formula": "Nr. avize emise în termenul legal / Nr. total avize emise × 100", "sursa": "Registru avize; DocManager", "frecventa": "Lunar", "tinta": "≥ 98%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Avize emise la limita termenului, fără verificare completă. → I3 (reveniri) și verificare prin sondaj."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Dosare fără a doua solicitare de completări", "formula": "Nr. dosare soluționate fără a doua solicitare de completare / Nr. total dosare × 100", "sursa": "Registru avize (fișă dosar)", "frecventa": "Trimestrial", "tinta": "≥ 80%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF2", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Prima listă de completări prea lungă, pentru a evita a doua solicitare. → Se verifică dacă cerințele sunt justificate legal."}], "cheie": "primăriile și elaboratorii de documentații cu dosare frecvente"}, {"cod": "SAADC", "nume": "Serviciul Avizare, Autorizare și Disciplină în Construcții", "directie": "Direcția Arhitect Șef", "tipClient": "extern", "clienti": "persoane fizice și juridice solicitante, proiectanți, primării", "servicii": ["Certificat de urbanism", "Autorizație de construire/desființare", "Prelungiri de valabilitate și sesizări privind disciplina în construcții"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (persoane fizice și juridice solicitante, proiectanți, primării)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Eliberarea certificatelor și autorizațiilor în termenul legal (Legea 50/1991)", "formula": "Nr. certificate/autorizații emise în termenul legal / Nr. total emise × 100", "sursa": "Registru de autorizare; DocManager", "frecventa": "Lunar", "tinta": "100%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Dosare declarate „incomplete” sau respinse pentru a opri termenul. → Se urmărește rata dosarelor respinse și I3."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Soluționarea sesizărilor privind disciplina în construcții", "formula": "Nr. sesizări soluționate în ≤ 30 zile / Nr. total sesizări × 100", "sursa": "Registru sesizări", "frecventa": "Trimestrial", "tinta": "≥ 95%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF2", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Răspuns formal la sesizări, fără verificare. → Se verifică un eșantion de dosare."}], "cheie": "primăriile fără structuri de specialitate (pe bază de convenție), proiectanți și investitori cu dosare repetate"}, {"cod": "STIPMLP", "nume": "Serviciul Tehnic, Investiții, Patrimoniu și Monitorizarea Lucrărilor Publice", "directie": "Direcția Tehnică și Investiții", "tipClient": "mixt", "clienti": "UAT-uri, chiriași și concesionari, executanți, cetățeni (sesizări infrastructură)", "servicii": ["Închirieri și concesionări de patrimoniu", "Sesizări privind drumurile județene", "Recepții și monitorizarea lucrărilor"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (UAT-uri, chiriași și concesionari, executanți, cetățeni (sesizări infrastructură))", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Soluționarea solicitărilor privind patrimoniul în termen", "formula": "Nr. solicitări de patrimoniu (închiriere, concesiune, acorduri) soluționate în ≤ 30 zile / Nr. total × 100", "sursa": "DocManager; registru patrimoniu", "frecventa": "Lunar", "tinta": "≥ 90%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Cereri „soluționate” prin răspuns formal. → Q7."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Soluționarea sesizărilor privind infrastructura", "formula": "Nr. sesizări/petiții privind infrastructura județeană soluționate în ≤ 30 zile / Nr. total × 100", "sursa": "DocManager; registru petiții", "frecventa": "Trimestrial", "tinta": "≥ 98%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Mediu și comunitate", "resp": "Șeful structurii", "efect": "Sesizări închise fără intervenție. → Se urmărește și remedierea efectivă (număr de intervenții)."}], "cheie": "UAT-uri, concesionari și chiriași cu contracte active, executanți ai lucrărilor în derulare"}, {"cod": "CPM-PSI", "nume": "Compartimentul Protecția Muncii și PSI", "directie": "Direcția Tehnică și Investiții", "tipClient": "intern", "clienti": "angajații instituției", "servicii": ["Instruire SSM și PSI", "Evaluarea riscurilor la locul de muncă", "Echipament de protecție"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (angajații instituției)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Instruirea periodică la termen", "formula": "Nr. angajați instruiți la termen / Nr. angajați cu instruire scadentă × 100", "sursa": "Fișe de instruire", "frecventa": "Lunar", "tinta": "≥ 98%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF6", "persp": "Satisfacția personalului", "resp": "Șeful structurii", "efect": "Instruiri bifate formal. → Verificare prin teste scurte, pe eșantion."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Accidente de muncă și incidente PSI", "formula": "Nr. accidente de muncă și incidente PSI înregistrate în perioadă", "sursa": "Registre SSM/PSI", "frecventa": "Trimestrial", "tinta": "0", "clasa": "PI", "temporal": "Curent", "csf": "CSF6", "persp": "Satisfacția personalului", "resp": "Șeful structurii", "efect": "Incidente nedeclarate. → Cel care raportează nu este sancționat; se raportează și incidentele evitate."}], "cheie": "angajații din toate structurile; conducătorii de structuri"}, {"cod": "CAJTP", "nume": "Compartimentul Autoritatea Județeană de Transport Public", "directie": "Direcția Tehnică și Investiții", "tipClient": "extern", "clienti": "operatori de transport, UAT-uri, călători, persoane eligibile pentru facilități", "servicii": ["Licențe de traseu și autorizări", "Sesizări ale călătorilor", "Facilități și compensații de tarif"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (operatori de transport, UAT-uri, călători, persoane eligibile pentru facilități)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Emiterea documentelor către operatori în termen", "formula": "Nr. licențe/autorizații/avize emise în ≤ 15 zile lucrătoare de la cererea completă / Nr. total × 100", "sursa": "Registru AJTP; DocManager", "frecventa": "Lunar", "tinta": "≥ 95%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF4", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Emitere rapidă, fără verificare completă. → I3."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Soluționarea sesizărilor călătorilor și operatorilor", "formula": "Nr. sesizări soluționate în ≤ 30 zile / Nr. total × 100", "sursa": "Registru sesizări", "frecventa": "Trimestrial", "tinta": "≥ 98%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF1", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Sesizări respinse ca neîntemeiate. → Se verifică un eșantion și se urmăresc sesizările repetate."}], "cheie": "operatorii de transport cu contracte de delegare, UAT-urile, călătorii cu facilități"}, {"cod": "SLP", "nume": "Serviciul Logistic și Protocol", "directie": "Direcția Tehnică și Investiții", "tipClient": "intern", "clienti": "structurile instituției, invitați la evenimente", "servicii": ["Aprovizionare și consumabile", "Reparații și întreținere în regie proprie", "Organizare evenimente de protocol"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (structurile instituției, invitați la evenimente)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Soluționarea cererilor logistice în termen", "formula": "Nr. cereri de aprovizionare/reparații soluționate în ≤ 5 zile lucrătoare / Nr. total × 100", "sursa": "Registru cereri logistice", "frecventa": "Lunar", "tinta": "≥ 90%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Cereri bifate ca rezolvate fără rezultat. → Q7 din partea clienților interni."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Evenimente de protocol fără neconformități", "formula": "Nr. evenimente fără neconformități raportate / Nr. total evenimente × 100", "sursa": "Fișe de eveniment", "frecventa": "Trimestrial", "tinta": "≥ 95%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF2", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Evenimente fără neconformități doar pentru că nu se raportează. → Se culege feedback de la invitați și organizatori."}], "cheie": "structurile cu cereri frecvente, organizatorii evenimentelor"}, {"cod": "SAPC", "nume": "Serviciul Achiziții Publice și Contracte", "directie": "Direcția Achiziții Publice", "tipClient": "mixt", "clienti": "structuri inițiatoare, operatori economici participanți", "servicii": ["Proceduri de atribuire", "Contracte și acte adiționale", "Clarificări către ofertanți"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (structuri inițiatoare, operatori economici participanți)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Respectarea graficului procedurilor de atribuire", "formula": "Nr. proceduri finalizate în termenul din Programul anual al achizițiilor / Nr. proceduri programate × 100", "sursa": "Programul anual al achizițiilor; SICAP", "frecventa": "Lunar", "tinta": "≥ 85%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF5", "persp": "Proces intern · Financiar", "resp": "Șeful structurii", "efect": "Termene respectate prin simplificarea documentațiilor. → Se urmărește I3 (contestații admise)."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Contestații admise", "formula": "Nr. contestații admise (CNSC/instanță) / Nr. proceduri atribuite × 100", "sursa": "Evidența contestațiilor", "frecventa": "Anual", "tinta": "≤ 2%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF2", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Documentații prea restrictive pentru a evita contestațiile. → Se urmărește și numărul de oferte primite."}], "cheie": "structurile inițiatoare cu achiziții mari, operatorii economici participanți frecvent"}, {"cod": "CAPD", "nume": "Compartimentul Achiziții Publice Directe", "directie": "Direcția Achiziții Publice", "tipClient": "intern", "clienti": "structurile inițiatoare ale achizițiilor", "servicii": ["Achiziții directe din catalog SICAP", "Referate de necesitate", "Comenzi și contracte directe"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (structurile inițiatoare ale achizițiilor)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Timpul de derulare a achiziției directe", "formula": "Nr. achiziții directe finalizate în ≤ 10 zile lucrătoare de la referat / Nr. total × 100", "sursa": "SICAP; registru achiziții directe", "frecventa": "Lunar", "tinta": "≥ 90%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Proces intern · Financiar", "resp": "Șeful structurii", "efect": "Achiziții fragmentate sau grăbite, cu justificare slabă. → Verificare de conformitate (I3)."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Dosare de achiziție fără corecturi", "formula": "Nr. achiziții fără corecții solicitate (SICAP, audit, control) / Nr. total × 100", "sursa": "Registru achiziții; rapoarte control", "frecventa": "Trimestrial", "tinta": "≥ 95%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF2", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Corecții nedeclarate. → Datele vin din SICAP și din controale, nu din autoraportare."}], "cheie": "structurile inițiatoare ale achizițiilor"}, {"cod": "SBCFS", "nume": "Serviciul Buget, Creanțe și Fonduri Speciale", "directie": "Direcția Economică", "tipClient": "mixt", "clienti": "unități subordonate, UAT-uri, structuri interne, debitori", "servicii": ["Rectificări și propuneri bugetare", "Creanțe și recuperare", "Fonduri speciale"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (unități subordonate, UAT-uri, structuri interne, debitori)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Analiza solicitărilor bugetare în termen", "formula": "Nr. solicitări de modificare/rectificare analizate în ≤ 10 zile lucrătoare / Nr. total × 100", "sursa": "DocManager; registru solicitări", "frecventa": "Lunar", "tinta": "≥ 90%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Financiar", "resp": "Șeful structurii", "efect": "Analize superficiale. → Q5 din partea clienților."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Colectarea creanțelor curente", "formula": "Valoare creanțe încasate în termen / Valoare creanțe scadente × 100", "sursa": "Evidența contabilă a creanțelor", "frecventa": "Trimestrial", "tinta": "≥ 90%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF4", "persp": "Financiar", "resp": "Șeful structurii", "efect": "Presiune excesivă asupra debitorilor sau măsuri premature. → Se urmăresc și contestațiile debitorilor."}], "cheie": "unitățile subordonate și UAT-urile beneficiare de alocări"}, {"cod": "SFC", "nume": "Serviciul Financiar Contabil", "directie": "Direcția Economică", "tipClient": "mixt", "clienti": "furnizori, beneficiari de finanțări, angajați, structuri interne", "servicii": ["Plata facturilor", "Decontări și avansuri", "Documente contabile și adeverințe"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (furnizori, beneficiari de finanțări, angajați, structuri interne)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Plata facturilor în termenul legal/contractual", "formula": "Nr. facturi plătite în termen (30 zile de la recepție, Legea 72/2013, sau termenul contractual) / Nr. total facturi × 100", "sursa": "Evidența contabilă", "frecventa": "Lunar", "tinta": "≥ 98%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Financiar", "resp": "Șeful structurii", "efect": "Plăți efectuate fără verificarea completă. → I3."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Documente de plată returnate pentru erori", "formula": "Nr. ordonanțări/dosare de plată returnate pentru erori / Nr. total × 100", "sursa": "Registru ordonanțări", "frecventa": "Trimestrial", "tinta": "≤ 3%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF2", "persp": "Proces intern · Financiar", "resp": "Șeful structurii", "efect": "Dosare cu erori corectate informal, fără înregistrare. → Returnările se înregistrează obligatoriu."}], "cheie": "furnizorii cu contracte active, beneficiarii de finanțări"}, {"cod": "SJCA", "nume": "Serviciul Juridic, Contencios Administrativ", "directie": "Direcția Juridică", "tipClient": "intern", "clienti": "structurile instituției, conducere, persoane implicate în litigii", "servicii": ["Avize de legalitate", "Consultanță juridică", "Reprezentare în instanță"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (structurile instituției, conducere, persoane implicate în litigii)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Emiterea avizelor juridice în termen", "formula": "Nr. solicitări de aviz/consultanță soluționate în ≤ 5 zile lucrătoare / Nr. total × 100", "sursa": "DocManager; registru avize", "frecventa": "Lunar", "tinta": "≥ 95%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Avize rapide, fără analiză. → Se urmăresc reveniri și rectificări."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Soluții favorabile în litigii", "formula": "Nr. hotărâri definitive favorabile / Nr. hotărâri definitive × 100", "sursa": "Evidența litigiilor", "frecventa": "Anual", "tinta": "≥ 70%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF2", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Litigii dificile evitate sau tranzacții inoportune. → Indicatorul servește analizei cauzelor, nu evaluării juriștilor."}], "cheie": "structurile care solicită frecvent avize"}, {"cod": "SPGCMI", "nume": "Serviciul Programe, Guvernanță Corporativă și Management Integrat", "directie": "Direcția Juridică", "tipClient": "mixt", "clienti": "întreprinderi publice, structuri interne, unități școlare (Programul pentru școli)", "servicii": ["Guvernanță corporativă a întreprinderilor publice", "Management integrat și control intern managerial", "Programul pentru școli"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (întreprinderi publice, structuri interne, unități școlare (Programul pentru școli))", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Transmiterea materialelor de guvernanță la termen", "formula": "Nr. rapoarte/avize/analize de guvernanță transmise la termen / Nr. total scadente × 100", "sursa": "Registru de lucru; DocManager", "frecventa": "Lunar", "tinta": "≥ 95%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF7", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Rapoarte transmise formal la termen. → Se urmărește utilizarea lor în decizii."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Închiderea acțiunilor corective SMI în termen", "formula": "Nr. acțiuni corective/preventive închise în termen / Nr. acțiuni cu termen scadent × 100", "sursa": "Registrul acțiunilor corective (PS-04/PS-05)", "frecventa": "Trimestrial", "tinta": "≥ 85%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF2", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Acțiuni închise fără eficacitate. → Eficacitatea se verifică după 3 luni."}], "cheie": "întreprinderile publice aflate sub autoritatea CJ, unitățile din Programul pentru școli"}, {"cod": "SGUPRSC-ATOP", "nume": "Serviciul Ghișeu Unic, ATOP, Parteneriate și Relația cu Societatea Civilă", "directie": "Aparat direct", "tipClient": "extern", "clienti": "cetățeni, persoane juridice, ONG-uri, solicitanți de informații publice", "servicii": ["Petiții și audiențe", "Informații de interes public (Legea 544/2001)", "Depunere cereri pentru avize, certificate, autorizații"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (cetățeni, persoane juridice, ONG-uri, solicitanți de informații publice)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Petiții și cereri de informații soluționate în termenul legal", "formula": "Nr. petiții (30 zile, OG 27/2002) și cereri Legea 544/2001 (10/30 zile) soluționate în termen / Nr. total × 100", "sursa": "DocManager; registrul petițiilor", "frecventa": "Lunar", "tinta": "≥ 98%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Redirecționări „de competența altei instituții” pentru a opri termenul. → Q7 și verificarea unui eșantion de petiții."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Timpul de așteptare la ghișeu", "formula": "Timp mediu de așteptare, măsurat pe eșantion de minimum 20 de clienți/lună (minute)", "sursa": "Fișă de observare la ghișeu", "frecventa": "Lunar", "tinta": "≤ 10 minute", "clasa": "RI", "temporal": "Curent", "csf": "CSF3", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Clienți grăbiți la ghișeu sau măsurare doar în orele liniștite. → Eșantion la ore diferite, inclusiv de vârf."}], "cheie": "persoane juridice și ONG-uri cu solicitări repetate, solicitanți de audiențe"}, {"cod": "COSRCJ", "nume": "Compartiment Organizare Ședințe și Relația cu Consilierii Județeni", "directie": "Aparat direct", "tipClient": "intern", "clienti": "consilieri județeni, structuri inițiatoare de proiecte de hotărâre", "servicii": ["Convocare și materiale pentru ședințe", "Redactarea și comunicarea hotărârilor", "Secretariat comisii de specialitate"], "indicatori": [{"cod": "I1", "tip": "Percepția clientului", "nume": "Indice de satisfacție a clientului (ISC)", "formula": "ISC = [(media Q1–Q6 − 1) / 4] × 100, pe chestionarele post-contact; raportat trimestrial, cu trend pe 18 luni și pe grupe de clienți (consilieri județeni, structuri inițiatoare de proiecte de hotărâre)", "sursa": "Chestionar post-contact (Anexa 3) – aplicația de chestionar", "frecventa": "Colectare continuă; raport trimestrial", "tinta": "Interval 75–85; sub 75 = plan de măsuri; n ≥ 30 / trimestru", "clasa": "RI", "temporal": "Trecut", "csf": "CSF3", "persp": "Client", "resp": "Responsabil management integrat (calcul); șeful structurii (acțiune)", "efect": "Personalul oferă chestionarul doar clienților mulțumiți sau influențează răspunsul. → Regula „fiecare al N-lea client”, pe toate canalele, fără asistență la completare; rezultatele nu se leagă de salarizare, premii sau evaluarea individuală; confruntare cu reclamațiile."}, {"cod": "I2", "tip": "Promptitudine", "nume": "Convocarea și transmiterea materialelor în termen", "formula": "Nr. ședințe convocate cu materiale transmise în termenele din Codul administrativ / Nr. total ședințe × 100", "sursa": "Registru ședințe", "frecventa": "Lunar", "tinta": "100%", "clasa": "PI", "temporal": "Trecut", "csf": "CSF1", "persp": "Client · Proces intern", "resp": "Șeful structurii", "efect": "Materiale transmise la timp, dar incomplete. → Q5 din partea consilierilor."}, {"cod": "I3", "tip": "Calitate / conformitate", "nume": "Comunicarea hotărârilor în termen", "formula": "Nr. hotărâri comunicate persoanelor/instituțiilor interesate în termenul legal / Nr. total hotărâri × 100", "sursa": "Registru hotărâri", "frecventa": "Trimestrial", "tinta": "≥ 98%", "clasa": "RI", "temporal": "Trecut", "csf": "CSF7", "persp": "Proces intern · Client", "resp": "Șeful structurii", "efect": "Comunicări formale fără confirmare de primire. → Se păstrează confirmarea de primire."}], "cheie": "consilierii județeni, structurile cu proiecte de hotărâre"}];
+const INST = {"kri": [{"cod": "KRI1", "nume": "ISC al instituției (ponderat cu numărul de chestionare)", "csf": "CSF3", "frecventa": "Trimestrial", "raport": "Președinte; Consiliul Județean (sinteză)", "obs": "Trend pe 18 luni"}, {"cod": "KRI2", "nume": "ISC – persoane fizice", "csf": "CSF3", "frecventa": "Trimestrial", "raport": "Președinte; Consiliul Județean", "obs": "Pe grupe de clienți, trend 18 luni"}, {"cod": "KRI3", "nume": "ISC – persoane juridice", "csf": "CSF3", "frecventa": "Trimestrial", "raport": "Președinte; Consiliul Județean", "obs": "Pe grupe de clienți, trend 18 luni"}, {"cod": "KRI4", "nume": "ISC – UAT-uri și instituții publice", "csf": "CSF4", "frecventa": "Trimestrial", "raport": "Președinte; Consiliul Județean", "obs": "Pe grupe de clienți, trend 18 luni"}, {"cod": "KRI5", "nume": "ISC – clienți interni (angajați, consilieri)", "csf": "CSF6", "frecventa": "Trimestrial", "raport": "Președinte; secretarul general", "obs": "Pe grupe de clienți, trend 18 luni"}, {"cod": "KRI6", "nume": "CSAT: răspunsuri „mulțumit” sau „foarte mulțumit” (Q6 ≥ 4)", "csf": "CSF3", "frecventa": "Trimestrial", "raport": "Președinte; Consiliul Județean", "obs": "Cu interval de încredere"}, {"cod": "KRI7", "nume": "Rata de rezolvare (Q7 „Da”)", "csf": "CSF2", "frecventa": "Trimestrial", "raport": "Președinte; Consiliul Județean", "obs": ""}, {"cod": "KRI8", "nume": "Cereri și petiții soluționate în termenul legal (agregat al structurilor cu clienți externi)", "csf": "CSF1", "frecventa": "Trimestrial", "raport": "Președinte; Consiliul Județean", "obs": "Din registre și DocManager (Fișa de raportare); nu se calculează în aplicația de chestionar"}], "kpi": [{"cod": "K1", "nume": "Cereri, petiții și dosare aflate la cel mult 5 zile lucrătoare de termenul legal și încă neînchise", "frecventa": "Săptămânal", "actioneaza": "Șeful structurii; secretarul general verifică lista", "csf": "CSF1", "date": "Listă din DocManager (de verificat cu SCRID)", "efect": "Răspunsuri formale date în grabă. → Se verifică prin Q7 și pe eșantion."}, {"cod": "K2", "nume": "Cereri și dosare cu termenul legal depășit", "frecventa": "Zilnic", "actioneaza": "Șeful structurii; secretarul general", "csf": "CSF1", "date": "Listă din DocManager (de verificat cu SCRID)", "efect": "Înregistrare târzie sau antedatare. → Data de înregistrare se preia automat din DocManager."}, {"cod": "K3", "nume": "Răspunsuri „Nu” la Q7 din ultimele 48 de ore, pe structură", "frecventa": "Zilnic (zile lucrătoare)", "actioneaza": "Șeful structurii", "csf": "CSF2", "date": "Raportul de excepții din aplicație", "efect": "Căutarea respondenților sau descurajarea răspunsurilor negative. → Chestionarul rămâne anonim; se analizează procesul, nu persoana."}, {"cod": "K4", "nume": "Momente din zi în care coada la ghișeu depășește X minute (X se stabilește în pilot)", "frecventa": "Zilnic", "actioneaza": "Șeful SGUPRSC-ATOP", "csf": "CSF3", "date": "Observare / contor la ghișeu", "efect": "Clienți grăbiți sau ghișeu închis mai devreme. → Se urmărește și rata de rezolvare (Q7) la ghișeu."}, {"cod": "K5", "nume": "Solicitări ale clienților-cheie (UAT-uri, operatori, unități subordonate) fără confirmare de primire în 48 de ore", "frecventa": "Zilnic", "actioneaza": "Șeful structurii vizate", "csf": "CSF4", "date": "DocManager, e-mail oficial (de verificat)", "efect": "Confirmări formale, fără rezolvare. → Se urmărește soluționarea prin K1 și K2."}, {"cod": "K6", "nume": "Proiecte, lucrări și documente întârziate, pe manager", "frecventa": "Săptămânal", "actioneaza": "Directorul executiv; secretarul general", "csf": "CSF5", "date": "Evidențele direcțiilor (Direcția Proiecte, Direcția Tehnică)", "efect": "Termene mutate în plan ca să nu apară întârzieri. → Comparație cu termenul din documentul aprobat inițial."}, {"cod": "K7", "nume": "Facturi cu termenul de plată în următoarele 5 zile lucrătoare, încă neplătite", "frecventa": "Săptămânal", "actioneaza": "Șeful SFC", "csf": "CSF1", "date": "Evidența contabilă", "efect": "Plăți fără verificare completă. → Se urmărește I3 al SFC (documente returnate)."}, {"cod": "K8", "nume": "Inițiative implementate după raportul trimestrial de satisfacție", "frecventa": "Săptămânal, 3 luni după fiecare raport", "actioneaza": "Responsabilul cu măsurarea; șefii structurilor", "csf": "CSF3", "date": "Registrul planurilor de măsuri", "efect": "Inițiative mărunte, numărate pentru cifră. → Fiecare inițiativă se leagă de o dimensiune Q1–Q5 cu media sub prag."}, {"cod": "K9", "nume": "Accidente de muncă și incidente PSI", "frecventa": "Imediat", "actioneaza": "Conducerea executivă; CPM-PSI", "csf": "CSF6", "date": "Registrele SSM/PSI", "efect": "Neraportare. → Cel care raportează nu este sancționat; se raportează și incidentele evitate."}], "pi": [{"cod": "P1", "nume": "Data următorului focus-grup cu clienții-cheie (UAT-uri, operatori, parteneri)", "temporal": "Viitor", "frecventa": "Trimestrial", "csf": "CSF3"}, {"cod": "P2", "nume": "Rata de răspuns la chestionar, pe structură (chestionare valide / contacte estimate)", "temporal": "Trecut", "frecventa": "Lunar", "csf": "CSF3"}, {"cod": "P3", "nume": "Indicatori și rapoarte abandonate în trimestru (rata de abandon)", "temporal": "Trecut", "frecventa": "Trimestrial", "csf": "CSF5"}, {"cod": "P4", "nume": "Structuri cu mai puțin de 10 răspunsuri în ultimele 90 de zile", "temporal": "Curent", "frecventa": "Lunar", "csf": "CSF3"}]};
+const CSFS = [{"cod": "CSF1", "nume": "Soluționarea solicitărilor clienților în termen", "origine": "Valoarea „profesionalism, competență, calitate și eficiență” din Declarația politică SMI; „livrare la timp” (Parmenter, App. E)"}, {"cod": "CSF2", "nume": "Acte și servicii corecte și complete din prima", "origine": "Obiectivul general nr. 1 din Declarația politică SMI (calitatea actului administrativ); „calitate din prima” (Parmenter, App. E)"}, {"cod": "CSF3", "nume": "Apropierea de client: informare, acces, ascultare", "origine": "Valoarea „orientare către cetățean” și obiectivul nr. 4 din Declarația politică SMI; „service excellence” (Parmenter, App. E)"}, {"cod": "CSF4", "nume": "Parteneriat funcțional cu UAT-uri, unități subordonate și operatori", "origine": "Atribuțiile de asistență tehnică pentru UAT și de control/îndrumare din ROF; „parteneriate” (Parmenter, App. E)"}, {"cod": "CSF5", "nume": "Finalizarea la termen a proiectelor, lucrărilor și procedurilor", "origine": "Obiectivul nr. 5 (strategia de dezvoltare) din Declarația politică SMI; „ne ducem lucrurile până la capăt” (Parmenter, tabelul 13.1)"}, {"cod": "CSF6", "nume": "Personal competent, implicat și în siguranță", "origine": "Obiectivele nr. 6 și 8 din Declarația politică SMI; „satisfacția personalului” (Parmenter, tabelul 13.1)"}, {"cod": "CSF7", "nume": "Transparență și încredere publică", "origine": "Valoarea „legalitatea și transparența actului decizional” din Declarația politică SMI; „public confidence and trust” (Parmenter, App. E)"}];
+const TC = ['Persoană fizică','Persoană juridică','UAT / instituție publică','Angajat / consilier județean'];
+const CH = ['La ghișeu','Telefon','E-mail / online','Audiență','În teren'];
+const QS = [
+  ['Cât de clare au fost informațiile primite?','Claritatea informațiilor'],
+  ['Cât de mulțumit sunteți de timpul în care ați primit soluția?','Timpul de soluționare'],
+  ['Cât de politicos și profesionist a fost personalul?','Politețe și profesionalism'],
+  ['Cât de simplă a fost procedura (documente, pași, deplasări)?','Simplitatea procedurii'],
+  ['Cât de bine a răspuns soluția primită nevoii dumneavoastră?','Utilitatea soluției'],
+  ['În general, cât de mulțumit sunteți de acest contact?','Satisfacție generală'],
+];
+const Q7 = ['Da','Parțial','Nu'];
+const FQ = ['Prima dată','De 2–5 ori','De peste 5 ori'];
+const MIN_N = 30, TARGET = 75;
+const $ = (s,r=document)=>r.querySelector(s);
+const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
+const esc = s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const byCode = Object.fromEntries(STRUCTS.map(s=>[s.cod,s]));
+const DIRS = [...new Set(STRUCTS.map(s=>s.directie))];
+const fmt1 = x=>x.toFixed(1).replace('.',',');
+
+/* ---------- stocare: db când e disponibil, altfel local ---------- */
+let db=null, real=[], denied=false, demoOn=false, demoData=null, userToggledDemo=false;
+const LS='cji_satisfactie_v1';
+function lsRead(){try{return JSON.parse(localStorage.getItem(LS)||'[]')}catch(e){return memLocal}}
+let memLocal=[];
+function lsWrite(a){try{localStorage.setItem(LS,JSON.stringify(a))}catch(e){memLocal=a}}
+async function save(rec){
+  if(db){await db.collection('responses').add(rec);return}
+  const a=lsRead();a.push(rec);lsWrite(a);real=a;autoDemo();renderResults();
+}
+async function initStore(){
+  let c=null;
+  try{c=await (window.claude&&window.claude.use?window.claude.use('db'):null)}catch(e){c=null}
+  db=c;
+  if(db){
+    db.collection('responses').orderBy('ts','desc').limit(2000).onSnapshot(s=>{
+      denied=false;real=s.docs.map(d=>d.data());autoDemo();renderResults();
+    },e=>{denied=true;real=[];autoDemo();renderResults()});
+  }else{real=lsRead();autoDemo();renderResults()}
+}
+function autoDemo(){ if(!userToggledDemo) demoOn = real.length===0; }
+
+/* ---------- formular ---------- */
+function fillSelect(sel,opts,ph){sel.innerHTML=(ph?`<option value="">${esc(ph)}</option>`:'')+opts}
+function buildForm(){
+  const g=DIRS.map(d=>`<optgroup label="${esc(d)}">${STRUCTS.filter(s=>s.directie===d).map(s=>`<option value="${esc(s.cod)}">${esc(s.cod)} – ${esc(s.nume)}</option>`).join('')}</optgroup>`).join('');
+  fillSelect($('#s'),g,'Alegeți structura…');
+  const chips=(el,name,arr)=>{el.innerHTML=arr.map((t,i)=>`<label class="chip"><input type="radio" name="${name}" value="${esc(t)}"><span>${esc(t)}</span></label>`).join('')};
+  chips($('#tc'),'tc',TC);chips($('#ch'),'ch',CH);chips($('#q7'),'q7',Q7);chips($('#fq'),'fq',FQ);
+  $('#qs').innerHTML=QS.map((q,i)=>`<fieldset class="q"><legend>${esc(q[0])}</legend>
+    <div class="scale" role="radiogroup">${[1,2,3,4,5].map(v=>`<label><input type="radio" name="q${i+1}" value="${v}" aria-label="${v} din 5"><span>${v}</span></label>`).join('')}</div>
+    <div class="ends"><span>1 · foarte nemulțumit</span><span>5 · foarte mulțumit</span></div></fieldset>`).join('');
+}
+function onStruct(){
+  const s=byCode[$('#s').value];const sv=$('#svc');
+  if(!s){fillSelect(sv,'','Alegeți mai întâi structura');sv.disabled=true;return}
+  fillSelect(sv,s.servicii.map(x=>`<option>${esc(x)}</option>`).join('')+'<option>Altceva</option>','Alegeți serviciul…');sv.disabled=false;
+  if(s.tipClient==='intern'){const r=$$('input[name=tc]').find(i=>i.value===TC[3]);if(r&&!$('input[name=tc]:checked'))r.checked=true}
+}
+function val(n){const e=$(`input[name=${n}]:checked`);return e?e.value:''}
+async function submit(e){
+  e.preventDefault();
+  const errs=[];
+  if(!$('#s').value)errs.push('alegeți structura');
+  if(!val('tc'))errs.push('alegeți tipul clientului');
+  if(!val('ch'))errs.push('alegeți canalul de contact');
+  QS.forEach((q,i)=>{if(!val('q'+(i+1)))errs.push('răspundeți la întrebarea '+(i+1)+' din 6')});
+  if(!val('q7'))errs.push('indicați dacă problema a fost rezolvată');
+  const er=$('#err');
+  if(errs.length){er.hidden=false;er.innerHTML='Mai aveți de completat:<ul>'+errs.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>';er.scrollIntoView({block:'nearest'});return}
+  er.hidden=true;
+  const rec={s:$('#s').value,svc:$('#svc').value||'',tc:val('tc'),ch:val('ch'),q:QS.map((_,i)=>+val('q'+(i+1))),q7:val('q7'),fq:val('fq'),txt:$('#txt').value.trim().slice(0,500),ts:new Date().toISOString()};
+  const b=$('#send');b.disabled=true;
+  try{await save(rec);$('#f').hidden=true;$('#thanks').hidden=false;$('#formcard').scrollIntoView({block:'start'})}
+  catch(x){er.hidden=false;er.textContent='Nu am putut trimite răspunsul. Verificați conexiunea și încercați din nou.'}
+  b.disabled=false;
+}
+function resetForm(keep){
+  $('#f').reset();$('#cnt').textContent='0';$('#f').hidden=false;$('#thanks').hidden=true;$('#err').hidden=true;
+  if(keep){$('#s').value=keep}onStruct();
+}
+
+/* ---------- calcule ---------- */
+function stats(recs){
+  const n=recs.length;if(!n)return{n:0};
+  const sum=recs.reduce((a,r)=>a+r.q.reduce((x,y)=>x+y,0),0);
+  const M=sum/(n*6);
+  const dim=QS.map((_,i)=>recs.reduce((a,r)=>a+r.q[i],0)/n);
+  const sat=recs.filter(r=>r.q[5]>=4).length;
+  const p=sat/n,z=1.96,den=1+z*z/n,c=(p+z*z/(2*n))/den,h=z*Math.sqrt(p*(1-p)/n+z*z/(4*n*n))/den;
+  return{n,M,isc:(M-1)/4*100,dim,csat:p*100,lo:Math.max(0,c-h)*100,hi:Math.min(1,c+h)*100,solved:recs.filter(r=>r.q7==='Da').length/n*100,no:recs.filter(r=>r.q7==='Nu').length/n*100};
+}
+function band(isc){return isc>=85?['Foarte bun','vb']:isc>=75?['Bun','good']:isc>=60?['De îmbunătățit','warn']:['Critic','crit']}
+const bandColor={vb:'var(--vb)',good:'var(--good)',warn:'var(--warn)',crit:'var(--crit)'};
+
+/* ---------- date demonstrative ---------- */
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function makeDemo(){
+  const r=rng(2026),out=[];const now=Date.now();
+  const comm=['Răspuns clar și rapid, vă mulțumesc.','Am fost trimis la alt ghișeu de două ori.','Ar fi utilă depunerea documentelor online.','Personal amabil, dar termenul a fost lung.','Procedura are prea multe documente.','Totul a decurs bine.','Nu am primit informații despre stadiul dosarului.','Programul cu publicul ar trebui prelungit.'];
+  STRUCTS.forEach((s,idx)=>{
+    const base=3.3+r()*1.3,n=Math.round(8+Math.pow(r(),1.6)*220);
+    for(let k=0;k<n;k++){
+      const q=QS.map((_,i)=>{let v=Math.round(base+(r()-.5)*2.2-(i===1?.25:0)+(i===3?-.1:0));return Math.max(1,Math.min(5,v))});
+      const age=Math.floor(Math.pow(r(),1.25)*540)*86400000+Math.floor(r()*86400000);
+      const sv=r();
+      out.push({s:s.cod,svc:s.servicii[Math.floor(r()*s.servicii.length)],tc:s.tipClient==='intern'?TC[3]:TC[Math.floor(r()*3)],ch:CH[Math.floor(r()*5)],q,fq:FQ[Math.floor(r()*3)],q7:q[5]>=4?(sv<.88?'Da':'Parțial'):(sv<.35?'Da':sv<.7?'Parțial':'Nu'),txt:r()<.14?comm[Math.floor(r()*comm.length)]:'',ts:new Date(now-age).toISOString(),demo:true});
+    }
+  });
+  return out;
+}
+
+/* ---------- rezultate ---------- */
+let selStruct='';
+function sourceData(){
+  if(demoOn){demoData=demoData||makeDemo();return demoData}
+  return real;
+}
+function filtered(noPeriod){
+  const d=sourceData(),p=noPeriod?'all':$('#fp').value,fd=$('#fd').value,ft=$('#ft').value,fc=$('#fc').value,ff=$('#ff').value;
+  const now=new Date();let from=0;
+  if(p==='30')from=Date.now()-30*864e5;else if(p==='90')from=Date.now()-90*864e5;
+  else if(p==='sem')from=new Date(now.getFullYear(),now.getMonth()<6?0:6,1).getTime();
+  return d.filter(r=>{const s=byCode[r.s];return s&&Date.parse(r.ts)>=from&&(!fd||s.directie===fd)&&(!ft||r.tc===ft)&&(!fc||r.ch===fc)&&(!ff||r.fq===ff)});
+}
+function barChart(rows){
+  const rh=24,lw=116,W=640,pw=W-lw-70,H=rows.length*rh+34;
+  const x=v=>lw+v/100*pw;
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Indicele de satisfacție pe structuri, cu ținta de ${TARGET} puncte">`;
+  [0,25,50,75,100].forEach(t=>{s+=`<line x1="${x(t)}" x2="${x(t)}" y1="18" y2="${H-8}" stroke="var(--line)" stroke-width="${t===75?0:1}"/><text x="${x(t)}" y="11" font-size="10" text-anchor="middle" style="fill:var(--muted)">${t}</text>`});
+  s+=`<line x1="${x(TARGET)}" x2="${x(TARGET)}" y1="16" y2="${H-8}" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="4 3"/>`;
+  rows.forEach((r,i)=>{
+    const y=24+i*rh,b=band(r.st.isc),low=r.st.n<MIN_N;
+    s+=`<g class="bar" data-c="${esc(r.cod)}" style="cursor:pointer"><rect x="0" y="${y-3}" width="${W}" height="${rh}" fill="transparent"/>
+      <text x="${lw-8}" y="${y+11}" font-size="11.5" text-anchor="end" font-weight="${selStruct===r.cod?700:400}">${esc(r.cod)}</text>
+      <rect x="${lw}" y="${y}" width="${Math.max(1,r.st.isc/100*pw)}" height="${rh-8}" rx="2" fill="${bandColor[b[1]]}" fill-opacity="${low?.38:1}" ${low?`stroke="${bandColor[b[1]]}" stroke-dasharray="3 2"`:''}/>
+      <text x="${lw+Math.max(1,r.st.isc/100*pw)+6}" y="${y+11}" font-size="11.5" style="font-variant-numeric:tabular-nums">${Math.round(r.st.isc)}${low?' *':''}</text></g>`;
+  });
+  return s+'</svg>';
+}
+function dimChart(st){
+  const W=420,lw=170,pw=W-lw-40,rh=30,H=QS.length*rh+8;
+  const x=v=>lw+v/5*pw;
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Media pe dimensiuni, scala 0–5">`;
+  QS.forEach((q,i)=>{const v=st.dim[i],y=4+i*rh,c=v<3.5?'var(--crit)':v<4?'var(--warn)':'var(--good)';
+    s+=`<text x="${lw-8}" y="${y+13}" font-size="12" text-anchor="end">${esc(q[1])}</text><rect x="${lw}" y="${y}" width="${Math.max(1,x(v)-lw)}" height="18" rx="2" fill="${c}"/><text x="${x(v)+6}" y="${y+13}" font-size="12" style="font-variant-numeric:tabular-nums">${fmt1(v)}</text>`});
+  s+=`<line x1="${x(3.5)}" x2="${x(3.5)}" y1="0" y2="${H}" stroke="var(--ink)" stroke-dasharray="3 3"/>`;
+  return s+'</svg>';
+}
+function trendChart(recs){
+  const now=new Date(),ms=[];
+  for(let i=5;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth()-i,1);ms.push({k:d.getFullYear()+'-'+(d.getMonth()+1),l:d.toLocaleDateString('ro-RO',{month:'short'}),recs:[]})}
+  recs.forEach(r=>{const d=new Date(r.ts),k=d.getFullYear()+'-'+(d.getMonth()+1),m=ms.find(m=>m.k===k);if(m)m.recs.push(r)});
+  const W=420,H=170,L=34,R=14,T=14,B=26,pw=W-L-R,ph=H-T-B;
+  const lo=40,hi=100,y=v=>T+(1-(v-lo)/(hi-lo))*ph,x=i=>L+i*pw/5;
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Evoluția lunară a ISC">`;
+  [40,60,75,100].forEach(t=>{s+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="${t===75?'var(--ink)':'var(--line)'}" ${t===75?'stroke-dasharray="4 3"':''}/><text x="${L-6}" y="${y(t)+4}" font-size="10" text-anchor="end" style="fill:var(--muted)">${t}</text>`});
+  const pts=ms.map((m,i)=>m.recs.length?{i,v:stats(m.recs).isc,n:m.recs.length}:null);
+  const line=pts.filter(Boolean).map(p=>`${x(p.i)},${y(Math.max(lo,p.v))}`).join(' ');
+  if(line)s+=`<polyline points="${line}" fill="none" stroke="var(--good)" stroke-width="2"/>`;
+  pts.forEach(p=>{if(p)s+=`<circle cx="${x(p.i)}" cy="${y(Math.max(lo,p.v))}" r="${p.i===5?5:3.5}" fill="var(--good)"/><text x="${x(p.i)}" y="${y(Math.max(lo,p.v))-9}" font-size="10.5" text-anchor="middle">${Math.round(p.v)}</text>`});
+  ms.forEach((m,i)=>{s+=`<text x="${x(i)}" y="${H-8}" font-size="10.5" text-anchor="middle" style="fill:var(--muted)">${esc(m.l)}</text>`});
+  return s+'</svg>';
+}
+
+const GR=[['Persoane fizice',TC[0],'Pers. fizice'],['Persoane juridice',TC[1],'Pers. juridice'],['UAT și instituții',TC[2],'UAT/instit.'],['Clienți interni',TC[3],'Interni']];
+function bullet(v,w){
+  w=w||190;const h=14,x=t=>t/100*w;
+  return `<svg viewBox="0 0 ${w} ${h+4}" width="100%" style="max-width:${w}px;display:block" role="img" aria-label="${Math.round(v)} din 100; interval-țintă 75–85"><rect x="0" y="2" width="${x(60)}" height="${h}" fill="var(--crit-bg)"/><rect x="${x(60)}" y="2" width="${x(15)}" height="${h}" fill="var(--warn-bg)"/><rect x="${x(75)}" y="2" width="${x(10)}" height="${h}" fill="var(--good-bg)"/><rect x="${x(85)}" y="2" width="${x(15)}" height="${h}" fill="var(--vb-bg)"/><rect x="0" y="${2+h/2-3}" width="${Math.max(1,x(v))}" height="6" fill="var(--ink)"/></svg>`;
+}
+function inWin(recs,from,to){return recs.filter(r=>{const t=Date.parse(r.ts);return t>=from&&t<to})}
+function delta(a,b){
+  if(a===null||b===null)return '<span class="dl eq">fără termen de comparație</span>';
+  const x=Math.round(a)-Math.round(b);
+  return x>0?`<span class="dl up">▲ +${x}</span> <span class="small muted">față de 90 zile anterioare</span>`:x<0?`<span class="dl dn">▼ ${x}</span> <span class="small muted">față de 90 zile anterioare</span>`:`<span class="dl eq">■ 0</span> <span class="small muted">față de 90 zile anterioare</span>`;
+}
+function kriPanel(){
+  const all=filtered(true),now=Date.now(),D90=90*864e5;
+  const cur=inWin(all,now-D90,now+1),prev=inWin(all,now-2*D90,now-D90);
+  const card=(t,rs,ps)=>{const s=stats(rs);if(!s.n)return `<div class="kpi"><div class="l"><b>${esc(t)}</b></div><div class="v">–</div><div class="l">fără răspunsuri în ultimele 90 de zile</div></div>`;
+    const p=ps.length?stats(ps).isc:null,b=band(s.isc);
+    return `<div class="kpi"><div class="l"><b>${esc(t)}</b> · n = ${s.n}${s.n<MIN_N?' <span class="pill na">indicativ</span>':''}</div><div class="v">${Math.round(s.isc)}<span class="small muted"> · <span class="pill ${b[1]}">${b[0]}</span></span></div>${bullet(s.isc)}<div style="margin-top:4px">${delta(s.isc,p)}</div></div>`};
+  const s=stats(cur),ps=stats(prev);
+  let out=`<div class="card" style="margin-bottom:16px"><h2>Tabloul KRI – fereastră de 90 de zile</h2><div class="small muted" style="margin:-4px 0 10px">Indicatori-cheie de rezultat pentru Președinte și Consiliul Județean (Parmenter). Bara arată valoarea față de intervalul-țintă 75–85 (zone: sub 60, 60–75, 75–85, peste 85). KRI8 (cereri soluționate în termen) vine din registre și nu este calculat aici.</div><div class="kri">`;
+  out+=card('KRI1 · ISC instituție',cur,prev);
+  GR.forEach((g,i)=>{out+=card('KRI'+(i+2)+' · '+g[0],cur.filter(r=>r.tc===g[1]),prev.filter(r=>r.tc===g[1]))});
+  out+=`<div class="kpi"><div class="l"><b>KRI6 · CSAT</b></div><div class="v">${s.n?Math.round(s.csat)+'%':'–'}</div><div class="l">${s.n?`interval 95%: ${Math.round(s.lo)}–${Math.round(s.hi)}%`:''}${ps.n?` · anterior ${Math.round(ps.csat)}%`:''}</div></div>`;
+  out+=`<div class="kpi"><div class="l"><b>KRI7 · Rata de rezolvare</b></div><div class="v">${s.n?Math.round(s.solved)+'%':'–'}</div><div class="l">${ps.n?`anterior ${Math.round(ps.solved)}%`:''}</div></div>`;
+  return out+'</div></div>';
+}
+function groupTrend(recs){
+  const now=new Date(),ms=[];
+  for(let i=17;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth()-i,1);ms.push({k:d.getFullYear()+'-'+(d.getMonth()+1),l:d.toLocaleDateString('ro-RO',{month:'short'}),i:17-i})}
+  const W=560,H=210,L=34,R=84,T=14,B=28,pw=W-L-R,ph=H-T-B,lo=40,hi=100,y=v=>T+(1-(Math.max(lo,v)-lo)/(hi-lo))*ph,x=i=>L+(i)*pw/17;
+  const cols=['var(--good)','var(--vb)','var(--warn)','var(--muted)'];
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Evoluția lunară a ISC pe grupe de clienți, 18 luni">`;
+  [40,60,75,100].forEach(t=>{s+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="${t===75?'var(--ink)':'var(--line)'}" ${t===75?'stroke-dasharray="4 3"':''}/><text x="${L-6}" y="${y(t)+4}" font-size="10" text-anchor="end" style="fill:var(--muted)">${t}</text>`});
+  GR.forEach((g,gi)=>{
+    const pts=ms.map(m=>{const rs=recs.filter(r=>{const dt=new Date(r.ts);return r.tc===g[1]&&dt.getFullYear()+'-'+(dt.getMonth()+1)===m.k});return rs.length>=3?{i:m.i,v:stats(rs).isc}:null});
+    // trend pe luni cu cel puțin 3 răspunsuri; segmentele se unesc doar între luni consecutive valide
+    let seg='';pts.forEach((p,k)=>{if(p)seg+=(seg?' ':'')+x(p.i)+','+y(p.v);else if(seg){if(seg.includes(' '))s+=`<polyline points="${seg}" fill="none" stroke="${cols[gi]}" stroke-width="2"/>`;seg=''}});
+    if(seg.includes(' '))s+=`<polyline points="${seg}" fill="none" stroke="${cols[gi]}" stroke-width="2"/>`;
+    pts.forEach(p=>{if(p)s+=`<circle cx="${x(p.i)}" cy="${y(p.v)}" r="2.5" fill="${cols[gi]}"/>`});
+    const last=[...pts].reverse().find(Boolean);
+    if(last)s+=`<text x="${x(last.i)+8}" y="${y(last.v)+4}" font-size="10.5" style="fill:${cols[gi]};font-weight:600">${esc(g[2])} ${Math.round(last.v)}</text>`;
+  });
+  ms.forEach((m,i)=>{if(i%3===0||i===17)s+=`<text x="${x(i)}" y="${H-8}" font-size="10" text-anchor="middle" style="fill:var(--muted)">${esc(m.l)}</text>`});
+  return s+'</svg><div class="small muted">Se afișează lunile cu cel puțin 3 răspunsuri per grupă; linia întreruptă este 75. Scala începe de la 40 pentru lizibilitate.</div>';
+}
+function spark(rs){
+  const now=new Date(),vals=[];
+  for(let i=5;i>=0;i--){const a=new Date(now.getFullYear(),now.getMonth()-i*3-2,1).getTime(),b=new Date(now.getFullYear(),now.getMonth()-i*3+1,1).getTime();const q=inWin(rs,a,b);vals.push(q.length>=5?stats(q).isc:null)}
+  const W=84,H=22,ok=vals.map((v,i)=>v===null?null:[i*W/5+2,H-3-(Math.max(40,v)-40)/60*(H-6)]);
+  const pts=ok.filter(Boolean);if(pts.length<2)return '<span class="small muted">–</span>';
+  const last=pts[pts.length-1];
+  return `<svg width="${W+4}" height="${H}" role="img" aria-label="Tendință ISC pe 6 trimestre"><polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="var(--muted)" stroke-width="1.5"/><circle cx="${last[0]}" cy="${last[1]}" r="2.8" fill="var(--good)"/></svg>`;
+}
+function trendSym(rs){
+  const now=Date.now(),D=90*864e5,c=inWin(rs,now-D,now+1),p=inWin(rs,now-2*D,now-D);
+  if(c.length<5||p.length<5)return ['■','eq','fără comparație'];
+  const x=Math.round(stats(c).isc)-Math.round(stats(p).isc);
+  return x>=3?['▲','up','în creștere']:x<=-3?['▼','dn','în scădere']:['■','eq','stabil'];
+}
+let staffView=false;
+function renderResults(){
+  if(!$('#p-e').classList.contains('hidden-tab'))renderExc();
+  $('#denied').hidden=!(denied&&!demoOn&&!real.length);
+  $('#demoBanner').hidden=!demoOn;
+  $('#demoOn').hidden=demoOn;
+  const recs=filtered(),all=stats(recs),box=$('#res');
+  if(!recs.length){box.innerHTML=`<div class="card"><h2>Nu există încă răspunsuri</h2><p class="muted" style="margin:0">Răspunsurile apar aici imediat ce clienții completează chestionarul. Folosiți filtrele pentru a lărgi perioada sau afișați datele demonstrative.</p></div>`;return}
+  const rows=STRUCTS.map(s=>({cod:s.cod,nume:s.nume,st:stats(recs.filter(r=>r.s===s.cod))})).filter(r=>r.st.n);
+  rows.sort((a,b)=>a.st.isc-b.st.isc);
+  const b=band(all.isc);
+  const sel=selStruct&&rows.find(r=>r.cod===selStruct)?selStruct:'';selStruct=sel;
+  const dimSt=sel?stats(recs.filter(r=>r.s===sel)):all;
+  const cm=recs.filter(r=>r.txt&&(!sel||r.s===sel)).sort((a,b)=>b.ts.localeCompare(a.ts)).slice(0,8);
+  const ninv=rows.filter(r=>r.st.n<MIN_N).length;
+  box.innerHTML=kriPanel()+`
+  <div class="kpis">
+    <div class="kpi"><div class="v">${Math.round(all.isc)}<span class="small muted"> / 100</span></div><div class="l">ISC al instituției · <span class="pill ${b[1]}">${b[0]}</span></div></div>
+    <div class="kpi"><div class="v">${Math.round(all.csat)}%</div><div class="l">CSAT (mulțumit sau foarte mulțumit), interval 95%: ${Math.round(all.lo)}–${Math.round(all.hi)}%</div></div>
+    <div class="kpi"><div class="v">${all.n.toLocaleString('ro-RO')}</div><div class="l">chestionare valide · ${rows.length} structuri${ninv?`, ${ninv} cu n &lt; ${MIN_N}`:''}</div></div>
+    <div class="kpi"><div class="v">${Math.round(all.solved)}%</div><div class="l">probleme rezolvate (Q7 „Da”)</div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h2>ISC pe structuri</h2>
+      <div class="small muted" style="margin:-4px 0 6px">Linia întreruptă marchează ținta de ${TARGET}. Valorile cu * și bara estompată au sub ${MIN_N} răspunsuri (indicative). Atingeți o structură pentru detalii.</div>
+      ${barChart(rows)}
+      <div class="legend"><span><i style="background:var(--vb)"></i>Foarte bun ≥ 85</span><span><i style="background:var(--good)"></i>Bun 75–84,9</span><span><i style="background:var(--warn)"></i>De îmbunătățit 60–74,9</span><span><i style="background:var(--crit)"></i>Critic &lt; 60</span></div>
+    </div>
+    <div class="stack">
+      <div class="card"><h2>${sel?esc(sel)+' · dimensiuni':'Dimensiuni (instituție)'}</h2><div class="small muted" style="margin:-4px 0 6px">Media pe scala 1–5, cu bara pornind de la zero; linia întreruptă este pragul de 3,5.</div>${dimChart(dimSt)}</div>
+      
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px"><h2>ISC pe grupe de clienți · 18 luni${sel?' · '+esc(sel):''}</h2>${groupTrend(filtered(true).filter(r=>!sel||r.s===sel))}</div>
+  <div class="card" style="margin-top:16px"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><h2 style="margin:0">${staffView?'Vedere pentru personal':'Tabel pe structuri'}</h2><button class="btn ghost" id="staffTog" style="padding:6px 12px;font-size:13px">${staffView?'Vedere cu cifre':'Vedere pentru personal (simboluri)'}</button></div>${staffView?'<div class="small muted" style="margin:8px 0">Personalul vede calificativul și tendința, nu cifrele (Parmenter). ▲ creștere · ■ stabil · ▼ scădere, față de 90 de zile anterioare.</div>':''}<div class="tw"><table>
+    ${staffView?`<thead><tr><th>Structura</th><th>Calificativ</th><th>Tendință</th></tr></thead><tbody>${rows.slice().sort((a,b)=>a.cod.localeCompare(b.cod)).map(r=>{const bb=band(r.st.isc),t=trendSym(filtered(true).filter(x=>x.s===r.cod));return `<tr><td><b>${esc(r.cod)}</b><div class="small muted">${esc(r.nume)}</div></td><td><span class="pill ${bb[1]}">${bb[0]}</span>${r.st.n<MIN_N?' <span class="pill na">indicativ</span>':''}</td><td><span class="sym dl ${t[1]}" title="${t[2]}">${t[0]}</span> <span class="small muted">${t[2]}</span></td></tr>`}).join('')}</tbody>`:
+    `<thead><tr><th>Structura</th><th class="n">n</th><th class="n">ISC</th><th>Față de interval</th><th>Tendință</th><th class="n">CSAT</th><th class="n">Rezolvat</th><th>Calificativ</th></tr></thead><tbody>
+    ${rows.map(r=>{const bb=band(r.st.isc);return `<tr class="row ${r.cod===sel?'sel':''}" data-c="${esc(r.cod)}" tabindex="0"><td><b>${esc(r.cod)}</b><div class="small muted">${esc(r.nume)}</div></td><td class="n">${r.st.n}</td><td class="n"><b>${Math.round(r.st.isc)}</b></td><td style="min-width:120px">${bullet(r.st.isc,120)}</td><td>${spark(filtered(true).filter(x=>x.s===r.cod))}</td><td class="n">${Math.round(r.st.csat)}% <span class="small muted">(${Math.round(r.st.lo)}–${Math.round(r.st.hi)})</span></td><td class="n">${Math.round(r.st.solved)}%</td><td><span class="pill ${bb[1]}">${bb[0]}</span>${r.st.n<MIN_N?' <span class="pill na">indicativ</span>':''}${r.st.no>15?' <span class="pill crit">Q7 „Nu” &gt; 15%</span>':''}</td></tr>`}).join('')}
+    </tbody>`}
+    </table></div></div>
+  <div class="card" style="margin-top:16px"><h2>Comentarii recente${sel?' · '+esc(sel):''}</h2>
+    ${cm.length?cm.map(r=>`<div class="cm">${esc(r.txt)}<div class="meta">${esc(r.s)} · ${esc(r.tc)} · ${esc(r.ch)} · ${new Date(r.ts).toLocaleDateString('ro-RO')}</div></div>`).join(''):'<p class="muted" style="margin:0">Niciun comentariu în perioada și filtrele alese.</p>'}
+    <div class="small muted" style="margin-top:8px">Înainte de analiză, SPGCMI elimină din comentarii orice date cu caracter personal.</div>
+  </div>`;
+}
+async function exportCsv(){
+  const recs=filtered();
+  const head=['data','structura','serviciu','tip_client','canal','frecventa_contact',...QS.map((_,i)=>'q'+(i+1)),'rezolvat','comentariu','demonstrativ'];
+  const q=v=>'"'+String(v).replace(/"/g,'""')+'"';
+  const csv='﻿'+[head.join(',')].concat(recs.map(r=>[r.ts.slice(0,10),r.s,r.svc,r.tc,r.ch,r.fq||'',...r.q,r.q7,r.txt,r.demo?'da':'nu'].map(q).join(','))).join('\n');
+  let d=null;try{d=await window.claude.use('downloads')}catch(e){}
+  if(d){try{await d.save({filename:'raspunsuri_satisfactie.csv',data:csv});return}catch(e){if(e&&e.code==='declined')return}}
+  $('#expfb').hidden=false;$('#expta').value=csv;
+}
+
+/* ---------- excepții și indicatori ---------- */
+function renderExc(){
+  const all=sourceData(),now=Date.now(),D=864e5,w=+$('#ew').value;
+  const recent=inWin(all,now-w*D,now+1);
+  const bad=recent.filter(r=>r.q7==='Nu'||r.q[5]<=2).sort((a,b)=>b.ts.localeCompare(a.ts));
+  const win90=inWin(all,now-90*D,now+1);
+  const per=STRUCTS.map(s=>({s,st:stats(win90.filter(r=>r.s===s.cod))}));
+  const crit=per.filter(p=>p.st.n>=5&&p.st.isc<60);
+  const dimLow=per.filter(p=>p.st.n>=10).map(p=>({p,d:QS.map((q,i)=>[q[1],p.st.dim[i]]).filter(x=>x[1]<3.5)})).filter(x=>x.d.length);
+  const nu=per.filter(p=>p.st.n>=10&&p.st.no>15);
+  const cov=per.filter(p=>p.st.n<10);
+  const sec=(t,n,body,cls)=>`<div class="card" style="margin-bottom:12px"><h3>${esc(t)} <span class="pill ${n?(cls||'warn'):'vb'}">${n||'nimic de semnalat'}</span></h3>${body}</div>`;
+  $('#exc').innerHTML=
+    sec('Răspunsuri „Nu” la Q7 sau satisfacție generală ≤ 2',bad.length,bad.slice(0,15).map(r=>`<div class="ex ${r.q7==='Nu'&&r.q[5]<=2?'crit':''}"><b>${esc(r.s)}</b> · ${esc(r.svc||'serviciu nespecificat')} · ${esc(r.tc)} · ${esc(r.ch)} · ${new Date(r.ts).toLocaleDateString('ro-RO')}<br>Q7: ${esc(r.q7)} · satisfacție generală: ${r.q[5]}${r.txt?'<br><span class="muted">„'+esc(r.txt)+'”</span>':''}</div>`).join('')+(bad.length>15?`<div class="small muted">… și încă ${bad.length-15}. Se afișează primele 15.</div>`:'')+(bad.length?'<div class="small muted" style="margin-top:6px">Acțiune: șeful structurii analizează în 48 de ore cauza din proces.</div>':''),'crit')+
+    sec('Structuri cu ISC sub 60 (ultimele 90 de zile, n ≥ 5)',crit.length,crit.map(p=>`<div class="ex crit"><b>${esc(p.s.cod)}</b> – ${esc(p.s.nume)} · ISC ${Math.round(p.st.isc)} · n = ${p.st.n}</div>`).join('')+(crit.length?'<div class="small muted">Acțiune: neconformitate și acțiune corectivă (PLO pct. 5.7).</div>':''),'crit')+
+    sec('Dimensiuni cu media sub 3,5 (n ≥ 10)',dimLow.length,dimLow.map(x=>`<div class="ex"><b>${esc(x.p.s.cod)}</b> · ${x.d.map(y=>esc(y[0])+' '+fmt1(y[1])).join('; ')}</div>`).join(''))+
+    sec('Structuri cu peste 15% răspunsuri „Nu” la Q7 (n ≥ 10)',nu.length,nu.map(p=>`<div class="ex"><b>${esc(p.s.cod)}</b> · ${Math.round(p.st.no)}% „Nu” · n = ${p.st.n}</div>`).join(''))+
+    sec('Acoperire insuficientă: sub 10 răspunsuri în 90 de zile',cov.length,cov.length?`<div class="ex">${cov.map(p=>esc(p.s.cod)+' ('+p.st.n+')').join(' · ')}<div class="small muted" style="margin-top:4px">Acțiune: se verifică dacă chestionarul este oferit după regula „fiecare al N-lea client”.</div></div>`:'')+
+    `<div class="notice">Candidații KPI K1–K9 (termene legale apropiate, solicitări fără răspuns etc.) cer liste din DocManager și din evidențele direcțiilor. Aplicația nu le generează; sunt descriși în fila <b>Indicatori → Instituție</b>.</div>`;
+}
+let indView='s';
+function setIndView(v){indView=v;['s','i','c'].forEach(k=>$('#v-'+k).setAttribute('aria-pressed',k===v));$('#isw').hidden=v!=='s';renderInd()}
+function renderInd(){
+  if(indView==='i')return renderInst();
+  if(indView==='c')return renderCsf();
+  const s=byCode[$('#is').value]||STRUCTS[0];
+  const dd=(t,v)=>v?`<dt>${t}</dt><dd>${esc(v)}</dd>`:'';
+  $('#indcards').innerHTML=`<div class="small muted" style="margin-bottom:2px">${esc(s.directie)} · Clienți: ${esc(s.clienti)}</div><div class="small muted" style="margin-bottom:8px"><i>Clienți-cheie propuși: ${esc(s.cheie||'')}</i></div><div class="ind">`+s.indicatori.map(x=>`<div class="card"><div style="display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap"><span class="tag">${esc(x.cod)}</span><span class="muted small">${esc(x.tip)}</span><span class="tag">${esc(x.clasa||'')} · ${esc(x.temporal||'')}</span><span class="tag">${esc(x.csf||'')}</span></div><h3>${esc(x.nume)}</h3><dl>${dd('Mod de calcul',x.formula)}${dd('Sursa datelor',x.sursa)}${dd('Frecvență',x.frecventa)}<dt>Limită inferioară / interval</dt><dd><b>${esc(x.tinta)}</b></dd>${dd('Perspective afectate',x.persp)}${dd('Responsabil',x.resp)}${dd('Efect nedorit → control',x.efect)}</dl></div>`).join('')+'</div>';
+}
+function renderInst(){
+  const item=(k,extra)=>`<div class="card"><div style="display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap"><span class="tag">${esc(k.cod)}</span><span class="tag">${esc(k.csf)}</span><span class="muted small">${esc(k.frecventa)}</span></div><h3>${esc(k.nume)}</h3><dl>${extra}</dl></div>`;
+  const dd=(t,v)=>v?`<dt>${t}</dt><dd>${esc(v)}</dd>`:'';
+  $('#indcards').innerHTML=`<div class="stack">
+  <div><h2>Indicatori-cheie de rezultat (KRI)</h2><div class="small muted" style="margin-bottom:8px">Cel mult 10, raportați trimestrial Președintelui și Consiliului Județean. Arată cum stăm, nu ce trebuie reparat.</div><div class="ind">${INST.kri.map(k=>item(k,dd('Raportat la',k.raport)+dd('Observații',k.obs))).join('')}</div></div>
+  <div><h2>Candidați KPI – de validat</h2><div class="small muted" style="margin-bottom:8px">KPI = nefinanciar, măsurat zilnic/săptămânal, cu acțiune a conducerii executive. Lista este o propunere pentru atelierul CSF și pentru testare; disponibilitatea datelor din DocManager nu a fost verificată.</div><div class="ind">${INST.kpi.map(k=>item(k,dd('Cine acționează',k.actioneaza)+dd('Date necesare',k.date)+dd('Efect nedorit → control',k.efect))).join('')}</div></div>
+  <div><h2>Indicatori de performanță de sistem (PI)</h2><div class="ind">${INST.pi.map(k=>item(k,dd('Orientare în timp',k.temporal))).join('')}</div></div></div>`;
+}
+function renderCsf(){
+  const tot=STRUCTS.reduce((a,s)=>a+s.indicatori.length,0);
+  $('#indcards').innerHTML=`<div class="card"><h2>Factori critici de succes – propuneri</h2><p class="muted" style="margin-top:0">Un singur set de 5–8 CSF pentru instituție, stabilit într-un atelier de două zile. Cele de mai jos sunt un punct de pornire, nu o decizie; toți indicatorii se leagă de un CSF.</p><div class="ind">${CSFS.map(c=>{const n=STRUCTS.flatMap(s=>s.indicatori).filter(x=>x.csf===c.cod).length;return `<div class="card"><span class="tag">${esc(c.cod)}</span><h3 style="margin-top:8px">${esc(c.nume)}</h3><div class="small muted">${esc(c.origine)}</div><div class="small" style="margin-top:8px">${n} din ${tot} indicatori ai structurilor</div><div class="csfbar"><i style="width:${n/tot*100}%"></i></div></div>`}).join('')}</div></div>`;
+}
+/* ---------- navigare ---------- */
+function showTab(id,push){
+  ['q','r','e','i'].forEach(k=>{const on=k===id;$('#p-'+k).classList.toggle('hidden-tab',!on);$('#tab-'+k).setAttribute('aria-selected',on)});
+  if(id==='r')renderResults();if(id==='e')renderExc();
+}
+function fromHash(){
+  const h=decodeURIComponent((location.hash||'').slice(1));
+  if(h==='rezultate')showTab('r');else if(h==='exceptii')showTab('e');else if(h==='indicatori')showTab('i');
+  else if(byCode[h]){showTab('q');$('#s').value=h;onStruct();$('#is').value=h;renderInd()}
+}
+
+function init(){
+  buildForm();
+  fillSelect($('#fd'),DIRS.map(d=>`<option>${esc(d)}</option>`).join(''),'Toate');
+  fillSelect($('#ft'),TC.map(d=>`<option>${esc(d)}</option>`).join(''),'Toți');
+  fillSelect($('#fc'),CH.map(d=>`<option>${esc(d)}</option>`).join(''),'Toate');fillSelect($('#ff'),FQ.map(d=>`<option>${esc(d)}</option>`).join(''),'Toate');
+  $('#is').innerHTML=DIRS.map(d=>`<optgroup label="${esc(d)}">${STRUCTS.filter(s=>s.directie===d).map(s=>`<option value="${esc(s.cod)}">${esc(s.cod)} – ${esc(s.nume)}</option>`).join('')}</optgroup>`).join('');
+  $('#tab-q').onclick=()=>showTab('q');$('#tab-r').onclick=()=>showTab('r');$('#tab-e').onclick=()=>showTab('e');$('#tab-i').onclick=()=>{showTab('i');renderInd()};$('#ew').onchange=renderExc;$('#v-s').onclick=()=>setIndView('s');$('#v-i').onclick=()=>setIndView('i');$('#v-c').onclick=()=>setIndView('c');
+  $('#s').onchange=onStruct;$('#f').onsubmit=submit;
+  $('#txt').oninput=e=>{$('#cnt').textContent=e.target.value.length};
+  $('#again').onclick=()=>resetForm('');
+  ['fp','fd','ft','fc','ff'].forEach(id=>$('#'+id).onchange=renderResults);
+  $('#is').onchange=renderInd;
+  $('#demoOff').onclick=()=>{userToggledDemo=true;demoOn=false;renderResults()};
+  $('#demoOn').onclick=()=>{userToggledDemo=true;demoOn=true;renderResults()};
+  $('#exp').onclick=exportCsv;
+  $('#res').addEventListener('click',e=>{if(e.target.closest('#staffTog')){staffView=!staffView;renderResults();return}const t=e.target.closest('[data-c]');if(t){selStruct=selStruct===t.dataset.c?'':t.dataset.c;renderResults()}});
+  $('#res').addEventListener('keydown',e=>{if(e.key==='Enter'){const t=e.target.closest('tr[data-c]');if(t){selStruct=selStruct===t.dataset.c?'':t.dataset.c;renderResults()}}});
+  renderInd();fromHash();addEventListener('hashchange',fromHash);
+  initStore();
+}
+init();
+</script>
